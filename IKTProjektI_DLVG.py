@@ -21,13 +21,16 @@ for c in range(0,n,1):
         t_abs.append(t[c])
 
 a=0
+lepesek=0
 
 for a in range(0,n,1):
-    a+=t[a]
+    lepesek+=t[a]
 
 b=0
+lepesek_abszolut=0
 
 for b in range(0,n,1):
-    b+=t_abs[b]
+    lepesek_abszolut+=t_abs[b]
 
-print(a/b*10000/100, "százalékkal ment többet.")
+print(round(((lepesek_abszolut-lepesek)/lepesek_abszolut*100),2), "százalékkal ment többet.")
+print(lepesek, lepesek_abszolut)
