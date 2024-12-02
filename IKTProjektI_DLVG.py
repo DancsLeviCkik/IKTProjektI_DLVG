@@ -14,7 +14,7 @@ t_abs=[]
 
 i2=0
 
-for i2 in range(0,n,1):
+for i2 in range(0,len(t),1):
     if t[i2]<0:
         t_abs.append(abs(t[i2]))
     else:
@@ -29,7 +29,7 @@ for i3 in range(0,n,1):
 i4=0
 lepesek_abszolut=0
 
-for i4 in range(0,n,1):
+for i4 in range(0,len(t),1):
     lepesek_abszolut+=t_abs[i4]
 
 print(f'{round(((lepesek_abszolut-lepesek)/lepesek_abszolut*100),2)} százalékkal ment többet')
@@ -42,7 +42,7 @@ i5=0
 
 haladas=0
 
-for i5 in range(0,n,1):
+for i5 in range(0,len(t),1):
     if t[i5] >= 0:
         haladas+=1
     else:
