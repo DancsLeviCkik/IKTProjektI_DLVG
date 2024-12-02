@@ -80,3 +80,12 @@ for i7 in range(len(t_abs)):
 print(f'{(maxlepes_szam)} db és {maxlepes} láb volt.')
 
 print(t_abs)
+
+#1d
+
+if 0 in t:
+    print("igen.")
+else:
+    print("nem.")
+
+print(t)
