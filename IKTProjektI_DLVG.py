@@ -23,7 +23,7 @@ for i2 in range(0,len(t),1):
 i3=0
 lepesek=0
 
-for i3 in range(0,n,1):
+for i3 in range(0,len(t),1):
     lepesek+=t[i3]
 
 i4=0
@@ -80,7 +80,4 @@ print(f'{(maxlepes_szam)} db és {maxlepes} láb volt.')
 
 #1d
 
-if 0 in t:
-    print("igen.")
-else:
-    print("nem.")
+print("igen." if 0 in t else "nem.")
