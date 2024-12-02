@@ -58,7 +58,6 @@ for i5 in range(len(t_lepessorozat)):
         max=t_lepessorozat[i5]
 
 print(max)
-print(t_lepessorozat)
 
 #1c
 
@@ -79,13 +78,9 @@ for i7 in range(len(t_abs)):
 
 print(f'{(maxlepes_szam)} db és {maxlepes} láb volt.')
 
-print(t_abs)
-
 #1d
 
 if 0 in t:
     print("igen.")
 else:
     print("nem.")
-
-print(t)
