@@ -1,38 +1,73 @@
-import random 
+import random
 
-tomb = []
-meret = 0 
-folytat = True
+lista = []
 
-while folytat:
-    print("n\Menü")
-    if meret == 0:
-        print("1. Tömb feltöltése véletlen számokkal")
-        print("2. Tömb feltöltése billentyűzetről")
-        print("3. Egy elem hozzáadása")
+menu = [
+    ("A feladat"),
+    ("B feladat"),
+    ("C feladat"),
+    ("D feladat"),
+    ("Lista módosítása (hozzáadás, törlés, módosítás)"),
+    ("Kilépés!"),
+]
+
+menuz=True
+
+for i in range(len(menu)):
+    print(f"{i+1}-{menu[i]}")
+
+valasztas = input()
+
+if (valasztas=='1'):
+    pass
+
+elif (valasztas=='2'):
+    pass
+
+elif (valasztas=='3'):
+    pass
+
+elif (valasztas=='4'):
+    pass
+
+elif (valasztas=='5'):
+    if (not lista):
+        print("A lista üres")
     else:
-        print("1.Tömb kiirása")
-        print("2.Tümb úritése")
-        print("3.Egy elem hozzáadása")
-        print("4.Egy elem módositása")
-        print("5.Egy elem törlése")
-        print("6.1a feladat")
-        print("7.1b feladat")
-        print("8.1c feladat")
-        print("9.1d feladat")
-        print("0.Kilépés")
+        for szam in lista:
+            print(szam,end=", ")
+        print(5)
 
-valasztas = int(input("Válassz egyet!"))
+        sorszam=input("Módositani vagy törölni kivánt szám")
 
-if valasztas == 0:
-    folytat == False #A ciklus befelyeződik, ha 0 a válasz
-elif valasztas == 1:
-    if meret == 0:
-        meret = int(input("Hány elemet töltsek fel?"))
-        tomb = [random.randint(1,100) for i in range(meret)]
-    else:
-        print(tomb)
-    # Ide kell rakni a többit
+        if (sorszam=="" or not sorszam.isnumeric()):
+            print("Érvénytelen sorszám")
+        else:
+            sorsz=int(sorszam)
+            if (0<=sorsz<len(lista)):
+                muvelet=input("-Módositás, -Törlés")
+
+                if (muvelet=="m"):
+                    ertek=int(input("Új érték:"))
+                    lista[sorsz]=ertek
+                    print("Lista értéke:")
+                    for number in (lista):
+                        print(szam, end=", ")
+                    print()
+
+                elif (muvelet=="t"):
+                    lista.pop(sorsz)
+                    print("Elem törölve")
+                    for number in (lista):
+                        print(szam, end=", ")
+                    print()
+                else:
+                    print("Érvénytelen muvelet")
+            else:
+                print("Érvénytelen sorszám")
+
+elif (valasztas=='6'):
+    print()
+
 else:
     print("Érvénytelen választás")
-
