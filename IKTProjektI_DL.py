@@ -61,7 +61,7 @@ print(max)
 
 #1c
 
-maxlepes=t_abs[0]
+maxlepes=t_lepessorozat[0]
 
 i7=0
 
