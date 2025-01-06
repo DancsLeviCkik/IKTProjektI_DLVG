@@ -1,13 +1,13 @@
 #Dancs Levente, Virágh Gergely 10.c Python első beadandó
 
+#függvények a véletlenszámos feltöltéshez és az abszolútértékhez
 import random, math
 
 #menü
 
 t = []
 j=0
-i=0
-mukodes=True
+mukodes=True #logikai változó a menüvezérlés megfelelő működéséhez
 
 print("A feladat:")
 print("Egy görbe este után Részeg Aladár elindul hazafele. Mivel jól sikerült az este, így Aladár nem csak előre halad az idő elteltével, hanem olykor-olykor hátra fele is lép. A telefonján indulás előtt a túra GPS bekapcsolódott és felvette a lépéssorozatát.")
@@ -169,9 +169,9 @@ while mukodes==True:
             n=int(input("Hozzáadni kívánt véletlen számok mennyisége: "))
             for j in range(0,n,1):
              t.append(random.randint(-10,10))
+            print("Sikeres feltöltés")
             print("")
             print("Tömb módosított értéke: ")
-            print("Sikeres feltöltés")
             print(t)
             
         else:
